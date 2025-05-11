@@ -87,15 +87,40 @@ function setSection(containerSelector, sectionTitle, items) {
   });
 }
 
+function downloadResumeAsPDF() {
+    const target = document.querySelector('.container'); // 이력서 전체를 감싸는 div
+    if (!target) return;
+  
+    html2canvas(target, { scale: 2 }).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new window.jspdf.jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+  
+      // A4 크기(mm)
+      const pageWidth = 210;
+      const pageHeight = 297;
+  
+      // 캔버스 비율에 맞게 이미지 크기 계산
+      const imgWidth = pageWidth;
+      const imgHeight = canvas.height * imgWidth / canvas.width;
+  
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.save('resume.pdf');
+    });
+  }
+
 // Devicon CDN의 SVG 아이콘 사용 및 info-container 동적 데이터 예시
 window.addEventListener('DOMContentLoaded', function() {
   // stack icons
-  addStackIcon('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg', 'cpp');
-  addStackIcon('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg', 'csharp');
-  addStackIcon('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', 'java');
-  addStackIcon('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg', 'spring');
-  addStackIcon('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', 'python');
-  addStackIcon('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', 'mysql');
+  addStackIcon('assets/stack-cpp.svg', 'cpp');
+  addStackIcon('assets/stack-csharp.svg', 'csharp');
+  addStackIcon('assets/stack-java.svg', 'java');
+  addStackIcon('assets/stack-spring.svg', 'spring');
+  addStackIcon('assets/stack-python.svg', 'python');
+  addStackIcon('assets/stack-mysql.svg', 'mysql');
 
   // info-container 동적 데이터 예시
   setProfileInfo('유명훈', '백엔드 개발자');
@@ -103,12 +128,10 @@ window.addEventListener('DOMContentLoaded', function() {
   setLinks([
     {
         href: 'https://github.com/mhoo999',
-        icon: `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="github" style="width: 24px; height: 24px; filter: invert(1); vertical-align: middle;">`
+        icon: `<img src="assets/link-github.svg" alt="github" style="width: 42px; height: 42px;">`
     }
   ]);
-  setDownloadButton('이력서 다운로드 ⬇️', function() {
-    alert('다운로드!');
-  });
+  setDownloadButton('이력서 다운로드 ⬇️', downloadResumeAsPDF);
 
   // Work Experience 섹션 동적 추가
   setSection('.work-container', 'Work Experience', [
