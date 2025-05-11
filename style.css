@@ -1,248 +1,246 @@
 body {
-    background: #111;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-  }
+  background: #111;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  overflow: hidden;
+  padding: 32px;
+}
+.row {
+  display: flex;
+  gap: 32px;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 0 0 320px;
+  min-width: 260px;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1 1 0;
+  min-width: 320px;
+}
+.profile-container {
+  background: #181818;
+  border-radius: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 3px solid #222;
+  display: block;
+}
+.info-container {
+  background: #181818;
+  color: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex: 1 1 0;
+  justify-content: space-between;
+}
+.profile-info {
+  margin-bottom: 24px;
+}
+.profile-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 2em;
+}
+.profile-info p {
+  margin: 0 0 16px 0;
+  color: #aaa;
+}
+.contact {
+  font-size: 1em;
+  margin-bottom: 16px;
+}
+.contact div {
+  margin-bottom: 8px;
+}
+.contact b {
+  margin-right: 10px;
+}
+.links {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.links a {
+  color: #fff;
+  font-size: 1.3em;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.links a:hover {
+  opacity: 1;
+}
+.download-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  margin-bottom: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+  margin-top: auto;
+}
+.download-btn:hover {
+  background: #2d5be3;
+}
+.sections-container {
+  background: #181818;
+  color: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 400px;
+}
+.sections-container h2 {
+  font-size: 2em;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.aboutme-container {
+  background: #222;
+  color: #fff;
+  border-radius: 24px;
+  padding: 24px;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.job-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 4px;
+}
+.job-company {
+  color: #2d5be3;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.job-date {
+  color: #aaa;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+.job-desc {
+  color: #ccc;
+  font-size: 1em;
+}
+.stack-container {
+  background: #181818;
+  border-radius: 16px;
+  padding: 24px 40px 24px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0;
+  min-width: 320px;
+}
+.stack-title {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+.stack-icons {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  width: auto;
+  box-sizing: border-box;
+}
+.stack-icon {
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.stack-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 900px) {
   .container {
-    max-width: 1100px;
-    margin: 40px auto;
-    overflow: hidden;
-    padding: 32px;
+    padding: 16px;
+    margin: 0px;
   }
   .row {
-    display: flex;
-    gap: 32px;
-  }
-  .left-column {
-    display: flex;
     flex-direction: column;
-    gap: 32px;
-    flex: 0 0 320px;
-    min-width: 260px;
+    gap: 24px;
   }
+  .left-column,
   .right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    flex: 1 1 0;
-    min-width: 320px;
-  }
-  .profile-container {
-    background: #181818;
-    border-radius: 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .profile-img {
     width: 100%;
-    height: auto;
-    border-radius: 24px;
-    object-fit: cover;
-    border: 3px solid #222;
-    display: block;
+    min-width: unset;
+    gap: 24px;
   }
-  .info-container {
-    background: #181818;
-    color: #fff;
-    border-radius: 24px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    flex: 1 1 0;
-    justify-content: space-between;
+  .profile-container,
+  .info-container,
+  .sections-container,
+  .stack-container {
+    width: 100%;
+    min-width: unset;
+    margin: 0 auto;
+    padding: 16px;
   }
-  .profile-info {
-    margin-bottom: 24px;
-  }
-  .profile-info h2 {
-    margin: 0 0 8px 0;
-    font-size: 2em;
-  }
-  .profile-info p {
-    margin: 0 0 16px 0;
-    color: #aaa;
-  }
-  .contact {
-    font-size: 1em;
-    margin-bottom: 16px;
-  }
-  .contact div {
-    margin-bottom: 8px;
-  }
-  .contact b {
-    margin-right: 10px;
-  }
+  .profile-info,
   .links {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .links a {
-    color: #fff;
-    font-size: 1.3em;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-  }
-  .links a:hover {
-    opacity: 1;
+    margin-bottom: 16px;
   }
   .download-btn {
-    width: 100%;
-    padding: 14px 0;
-    background: #222;
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1em;
-    margin-bottom: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background 0.2s;
-    margin-top: auto;
-  }
-  .download-btn:hover {
-    background: #2d5be3;
-  }
-  .sections-container {
-    background: #181818;
-    color: #fff;
-    border-radius: 24px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-    min-height: 400px;
-  }
-  .sections-container h2 {
-    font-size: 2em;
-    margin-top: 64px;
-    margin-bottom: 16px;
-    color: #fff;
-  }
-  .aboutme-container {
-    background: #222;
-    color: #fff;
-    border-radius: 24px;
-    padding: 24px;
-  }
-  .experience {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-  .job-title {
-    font-weight: bold;
-    font-size: 1.1em;
-    margin-bottom: 4px;
-  }
-  .job-company {
-    color: #2d5be3;
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-  .job-date {
-    color: #aaa;
-    font-size: 0.95em;
-    margin-bottom: 8px;
-  }
-  .job-desc {
-    color: #ccc;
-    font-size: 1em;
-  }
-  .stack-container {
-    background: #181818;
-    border-radius: 16px;
-    padding: 24px 40px 24px 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0;
-    min-width: 320px;
+    display: none;
   }
   .stack-title {
-    color: #fff;
-    font-size: 1.2em;
-    margin-bottom: 0;
-    margin-right: 40px;
+    margin-right: 24px;
   }
   .stack-icons {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    width: auto;
+    gap: 8px;
+  }
+  .stack-icons img {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  *, *::before, *::after {
     box-sizing: border-box;
   }
-  .stack-icon {
-    background: #fff;
-    border: 2px solid #222;
-    border-radius: 8px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  .stack-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  /* 모바일 반응형 */
-  @media (max-width: 900px) {
-    .container {
-      padding: 16px;
-      margin: 0px;
-    }
-    .row {
-      flex-direction: column;
-      gap: 24px;
-    }
-    .left-column,
-    .right-column {
-      width: 100%;
-      min-width: unset;
-      gap: 24px;
-    }
-    .profile-container,
-    .info-container,
-    .sections-container,
-    .stack-container {
-      width: 100%;
-      min-width: unset;
-      margin: 0 auto;
-      padding: 16px;
-    }
-    .profile-info,
-    .links {
-      margin-bottom: 16px;
-    }
-    .download-btn {
-      display: none;
-    }
-    .stack-title {
-      margin-right: 24px;
-    }
-    .stack-icons {
-      gap: 8px;
-    }
-    .stack-icons img {
-      min-width: 40px;
-      min-height: 40px;
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-  }
-
-  /* 기존 sidebar, main 등 스타일은 더 이상 사용하지 않으므로 삭제 또는 무시 */
+}

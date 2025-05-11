@@ -114,6 +114,9 @@ function downloadResumeAsPDF() {
 
 // Devicon CDN의 SVG 아이콘 사용 및 info-container 동적 데이터 예시
 window.addEventListener('DOMContentLoaded', function() {
+  // 기본 다크모드 적용
+  document.body.classList.add('dark-mode');
+
   // stack icons
   addStackIcon('assets/stack-cpp.svg', 'cpp');
   addStackIcon('assets/stack-csharp.svg', 'csharp');
@@ -176,5 +179,19 @@ window.addEventListener('DOMContentLoaded', function() {
   ]);
   
   setAboutMe('<b style="font-size: 1.2em;">안녕하세요. 변화에 강한 풀스택 개발자 유명훈입니다.</b><br>프론트엔드부터 백엔드, 클라우드 인프라까지 두루 경험하며 서비스 전반을 다룰 수 있습니다. AI 시대의 개발자는 하나의 기술에 머무르지 않고, 새로운 도구를 빠르게 익히고, 다양한 문제를 유연하게 해결하는 역량이 중요하다고 생각합니다. AI를 개발에 적극 활용하며, 변화에 민첩하게 대응할 수 있도록 성장해 나가고 있습니다.');
+
+  // 라이트/다크 모드 FAB 버튼 기능
+  const fab = document.getElementById('theme-fab');
+  if (!fab) return;
+  fab.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      fab.style.background = '#fff';
+      fab.querySelector('img').style.filter = 'invert(0)';
+    } else {
+      fab.style.background = '#222';
+      fab.querySelector('img').style.filter = 'invert(1)';
+    }
+  });
 });
 
