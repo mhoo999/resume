@@ -55,7 +55,6 @@ body {
     align-items: left;
     flex: 1 1 0;
     justify-content: space-between;
-    min-height: 420px;
   }
   .profile-info {
     margin-bottom: 24px;
@@ -113,7 +112,7 @@ body {
   .download-btn:hover {
     background: #2d5be3;
   }
-  .work-container {
+  .sections-container {
     background: #181818;
     color: #fff;
     border-radius: 24px;
@@ -123,10 +122,17 @@ body {
     min-width: 320px;
     min-height: 400px;
   }
-  .work-container h2 {
+  .sections-container h2 {
     font-size: 2em;
-    margin-bottom: 32px;
+    margin-top: 64px;
+    margin-bottom: 16px;
     color: #fff;
+  }
+  .aboutme-container {
+    background: #222;
+    color: #fff;
+    border-radius: 24px;
+    padding: 40px;
   }
   .experience {
     display: flex;
@@ -220,15 +226,12 @@ body {
     }
     .profile-container,
     .info-container,
-    .work-container,
+    .sections-container,
     .stack-container {
       width: 100%;
       min-width: unset;
       margin: 0 auto;
       padding: 16px;
-    }
-    .info-container {
-      min-height: auto;
     }
     .profile-info,
     .links {
