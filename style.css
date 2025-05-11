@@ -76,7 +76,7 @@ body {
   }
   .links {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     margin-bottom: 24px;
   }
   .links a {
@@ -129,7 +129,7 @@ body {
     background: #222;
     color: #fff;
     border-radius: 24px;
-    padding: 40px;
+    padding: 24px;
   }
   .experience {
     display: flex;

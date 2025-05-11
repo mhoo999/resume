@@ -88,29 +88,29 @@ function setSection(containerSelector, sectionTitle, items) {
 }
 
 function downloadResumeAsPDF() {
-    const target = document.querySelector('.container'); // 이력서 전체를 감싸는 div
-    if (!target) return;
-  
-    html2canvas(target, { scale: 2 }).then(canvas => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new window.jspdf.jsPDF({
-        orientation: 'portrait',
-        unit: 'mm',
-        format: 'a4'
-      });
-  
-      // A4 크기(mm)
-      const pageWidth = 210;
-      const pageHeight = 297;
-  
-      // 캔버스 비율에 맞게 이미지 크기 계산
-      const imgWidth = pageWidth;
-      const imgHeight = canvas.height * imgWidth / canvas.width;
-  
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-      pdf.save('resume.pdf');
+  const target = document.querySelector('.container'); // 이력서 전체를 감싸는 div
+  if (!target) return;
+
+  html2canvas(target, { scale: 2 }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new window.jspdf.jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4'
     });
-  }
+
+    // A4 크기(mm)
+    const pageWidth = 210;
+    const pageHeight = 297;
+
+    // 캔버스 비율에 맞게 이미지 크기 계산
+    const imgWidth = pageWidth;
+    const imgHeight = canvas.height * imgWidth / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+    pdf.save('resume.pdf');
+  });
+}
 
 // Devicon CDN의 SVG 아이콘 사용 및 info-container 동적 데이터 예시
 window.addEventListener('DOMContentLoaded', function() {
@@ -123,12 +123,16 @@ window.addEventListener('DOMContentLoaded', function() {
   addStackIcon('assets/stack-mysql.svg', 'mysql');
 
   // info-container 동적 데이터 예시
-  setProfileInfo('유명훈', '백엔드 개발자');
+  setProfileInfo('유명훈', '풀스택 개발자');
   setContactInfo('mhoo999@naver.com', '010-5220-9785');
   setLinks([
     {
         href: 'https://github.com/mhoo999',
-        icon: `<img src="assets/link-github.svg" alt="github" style="width: 42px; height: 42px;">`
+        icon: `<img src="assets/link-github.svg" alt="github" style="width: 36px; height: 36px; filter: invert(1);">`
+    },
+    {
+      href: 'https://techoonology.notion.site/Study-8212a4fbbba5427bb463607cb46bfc59?pvs=4',
+      icon: `<img src="assets/link-notion.svg" alt="notion" style="width: 36px; height: 36px;">`
     }
   ]);
   setDownloadButton('이력서 다운로드 ⬇️', downloadResumeAsPDF);
@@ -152,19 +156,25 @@ window.addEventListener('DOMContentLoaded', function() {
   // Education 섹션 동적 추가 (예시)
   setSection('.education-container', 'Education', [
     {
+      school: '청년취업 사관학교',
+      degree: 'MSA 기반 자바 개발자 과정',
+      date: '2025 - 2025',
+      desc: '프론트엔드, 백엔드, 데이터베이스, 클라우드 인프라(AWS) 등 전반적인 개발 환경 구축 및 개발 경험.'
+    },
+    {
       school: '스파르타 코딩클럽',
       degree: 'Spring 백엔드 개발자 과정',
       date: '2024 - 2025',
       desc: '자바 기본 문법 및 스프링 프레임워크 학습. JPA, Spring Security, JWT 등 활용.'
     },
-    {
-      school: '청년취업 사관학교',
-      degree: 'XR 콘텐츠 개발자 과정',
-      date: '2023 - 2024',
-      desc: 'Unreal Engine, C++ 기본 문법 학습 및 게임 개발 프로젝트 진행.'
-    }
+    // {
+    //   school: '청년취업 사관학교',
+    //   degree: 'XR 콘텐츠 개발자 과정',
+    //   date: '2023 - 2024',
+    //   desc: 'Unreal Engine, C++ 기본 문법 학습 및 게임 개발 프로젝트 진행.'
+    // }
   ]);
   
-  setAboutMe('안녕하세요. 유명훈입니다. 백엔드 개발자를 꿈꾸는 대학생입니다.');
+  setAboutMe('<b style="font-size: 1.2em;">안녕하세요. 변화에 강한 풀스택 개발자 유명훈입니다.</b><br>프론트엔드부터 백엔드, 클라우드 인프라까지 두루 경험하며 서비스 전반을 다룰 수 있습니다. AI 시대의 개발자는 하나의 기술에 머무르지 않고, 새로운 도구를 빠르게 익히고, 다양한 문제를 유연하게 해결하는 역량이 중요하다고 생각합니다. AI를 개발에 적극 활용하며, 변화에 민첩하게 대응할 수 있도록 성장해 나가고 있습니다.');
 });
 
