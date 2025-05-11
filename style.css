@@ -204,12 +204,18 @@ body {
       width: 100%;
       min-width: unset;
       margin: 0 auto;
-    }
-    .work-container {
       padding: 16px;
     }
-    .stack-container {
-      margin-top: 16px;
+    .stack-icons {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      width: 100%;
+      justify-content: left;
+      gap: 8px;
+    }
+    .stack-icons img {
+      min-width: 60px;
+      min-height: 60px;
     }
     *, *::before, *::after {
       box-sizing: border-box;
