@@ -75,6 +75,9 @@ body {
   .contact div {
     margin-bottom: 8px;
   }
+  .contact b {
+    margin-right: 10px;
+  }
   .links {
     display: flex;
     gap: 12px;
