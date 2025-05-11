@@ -1,0 +1,212 @@
+body {
+    background: #eaeaea;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 32px;
+  }
+  .row {
+    display: flex;
+    gap: 32px;
+  }
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 0 0 320px;
+    min-width: 260px;
+  }
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1 1 0;
+    min-width: 320px;
+  }
+  .profile-container {
+    background: #181818;
+    border-radius: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    border: 3px solid #222;
+    display: block;
+  }
+  .info-container {
+    background: #181818;
+    color: #fff;
+    border-radius: 24px;
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0;
+  }
+  .profile-info {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .profile-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 2em;
+  }
+  .profile-info p {
+    margin: 0 0 16px 0;
+    color: #aaa;
+  }
+  .contact {
+    font-size: 1em;
+    margin-bottom: 16px;
+  }
+  .contact div {
+    margin-bottom: 8px;
+  }
+  .links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+  .links a {
+    color: #fff;
+    font-size: 1.3em;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .links a:hover {
+    opacity: 1;
+  }
+  .download-btn {
+    width: 100%;
+    padding: 14px 0;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .download-btn:hover {
+    background: #2d5be3;
+  }
+  .work-container {
+    background: #181818;
+    color: #fff;
+    border-radius: 24px;
+    padding: 40px 40px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 400px;
+  }
+  .work-container h2 {
+    font-size: 2em;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .job-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+  }
+  .job-company {
+    color: #2d5be3;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .job-date {
+    color: #aaa;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+  }
+  .job-desc {
+    color: #ccc;
+    font-size: 1em;
+  }
+  .stack-container {
+    width: 100%;
+    background: #222;
+    border-radius: 16px;
+    padding: 16px 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    min-width: 320px;
+  }
+  .stack-title {
+    color: #aaa;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  .stack-icons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stack-icons img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #fff;
+    padding: 4px;
+  }
+
+  /* 모바일 반응형 */
+  @media (max-width: 900px) {
+    .container {
+      padding: 16px;
+    }
+    .row {
+      flex-direction: column;
+      gap: 24px;
+    }
+    .left-column,
+    .right-column {
+      width: 100%;
+      min-width: unset;
+      gap: 24px;
+    }
+    .profile-container,
+    .info-container,
+    .work-container,
+    .stack-container {
+      width: 100%;
+      min-width: unset;
+      margin: 0 auto;
+    }
+    .work-container {
+      padding: 32px 16px 24px 16px;
+    }
+    .stack-container {
+      margin-top: 16px;
+    }
+  }
+
+  /* 기존 sidebar, main 등 스타일은 더 이상 사용하지 않으므로 삭제 또는 무시 */
