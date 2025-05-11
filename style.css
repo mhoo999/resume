@@ -1,7 +1,10 @@
 body {
-  background: #111;
+  background: #fff;
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
+}
+body.dark-mode {
+  background: #111;
 }
 .container {
   max-width: 1100px;
@@ -38,13 +41,16 @@ body {
   width: 100%;
   height: auto;
   border-radius: 24px;
-  object-fit: cover;
-  border: 3px solid #222;
+  object-fit: scale-down;
+  border: 3px solid #e0e0e0;
   display: block;
 }
+body.dark-mode .profile-img {
+  border: 3px solid #222;
+}
 .info-container {
-  background: #181818;
-  color: #fff;
+  background: #e0e0e0;
+  color: #000;
   border-radius: 24px;
   padding: 24px;
   display: flex;
@@ -52,6 +58,10 @@ body {
   align-items: left;
   flex: 1 1 0;
   justify-content: space-between;
+}
+body.dark-mode .info-container {
+  background: #181818;
+  color: #fff;
 }
 .profile-info {
   margin-bottom: 24px;
@@ -62,6 +72,9 @@ body {
 }
 .profile-info p {
   margin: 0 0 16px 0;
+  color: #444;
+}
+body.dark-mode .profile-info p {
   color: #aaa;
 }
 .contact {
@@ -80,7 +93,6 @@ body {
   margin-bottom: 24px;
 }
 .links a {
-  color: #fff;
   font-size: 1.3em;
   text-decoration: none;
   opacity: 0.7;
@@ -92,8 +104,8 @@ body {
 .download-btn {
   width: 100%;
   padding: 14px 0;
-  background: #222;
-  color: #fff;
+  background: #fff;
+  color: #222;
   border: none;
   border-radius: 12px;
   font-size: 1.1em;
@@ -106,12 +118,16 @@ body {
   transition: background 0.2s;
   margin-top: auto;
 }
+body.dark-mode .download-btn {
+  background: #222;
+  color: #fff;
+}
 .download-btn:hover {
   background: #2d5be3;
 }
 .sections-container {
-  background: #181818;
-  color: #fff;
+  background: #e0e0e0;
+  color: #000;
   border-radius: 24px;
   padding: 40px;
   display: flex;
@@ -119,17 +135,28 @@ body {
   min-width: 320px;
   min-height: 400px;
 }
+body.dark-mode .sections-container {
+  background: #181818;
+  color: #fff;
+}
 .sections-container h2 {
   font-size: 2em;
   margin-top: 64px;
   margin-bottom: 16px;
+  color: #000;
+}
+body.dark-mode .sections-container h2 {
   color: #fff;
 }
 .aboutme-container {
-  background: #222;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border-radius: 24px;
   padding: 24px;
+}
+body.dark-mode .aboutme-container {
+  background: #222;
+  color: #fff;
 }
 .experience {
   display: flex;
@@ -147,16 +174,23 @@ body {
   margin-bottom: 4px;
 }
 .job-date {
-  color: #aaa;
+  color: #444;
   font-size: 0.95em;
   margin-bottom: 8px;
 }
+body.dark-mode .job-date {
+  color: #aaa;
+}
 .job-desc {
-  color: #ccc;
+  color: #444;
   font-size: 1em;
 }
+body.dark-mode .job-desc {
+  color: #ccc;
+}
 .stack-container {
-  background: #181818;
+  background: #e0e0e0;
+  color: #000;
   border-radius: 16px;
   padding: 24px 40px 24px 40px;
   display: flex;
@@ -165,8 +199,11 @@ body {
   margin-top: 0;
   min-width: 320px;
 }
-.stack-title {
+body.dark-mode .stack-container {
+  background: #181818;
   color: #fff;
+}
+.stack-title {
   font-size: 1.2em;
   margin-bottom: 0;
   margin-right: 40px;
@@ -181,7 +218,6 @@ body {
 }
 .stack-icon {
   background: #fff;
-  border: 2px solid #222;
   border-radius: 8px;
   width: 60px;
   height: 60px;
@@ -214,7 +250,6 @@ body {
     min-width: unset;
     gap: 24px;
   }
-  .profile-container,
   .info-container,
   .sections-container,
   .stack-container {
@@ -222,6 +257,9 @@ body {
     min-width: unset;
     margin: 0 auto;
     padding: 16px;
+  }
+  .sections-container {
+    padding-bottom: 64px;
   }
   .profile-info,
   .links {
