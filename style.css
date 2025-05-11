@@ -49,14 +49,15 @@ body {
     background: #181818;
     color: #fff;
     border-radius: 24px;
-    padding: 32px 24px 24px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     flex: 1 1 0;
+    justify-content: space-between;
+    min-height: 420px;
   }
   .profile-info {
-    text-align: center;
     margin-bottom: 24px;
   }
   .profile-info h2 {
@@ -78,7 +79,6 @@ body {
     display: flex;
     gap: 12px;
     margin-bottom: 24px;
-    justify-content: center;
   }
   .links a {
     color: #fff;
@@ -105,6 +105,7 @@ body {
     justify-content: center;
     gap: 8px;
     transition: background 0.2s;
+    margin-top: auto;
   }
   .download-btn:hover {
     background: #2d5be3;
@@ -113,7 +114,7 @@ body {
     background: #181818;
     color: #fff;
     border-radius: 24px;
-    padding: 40px 40px 32px 40px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     min-width: 320px;
@@ -150,19 +151,20 @@ body {
   }
   .stack-container {
     width: 100%;
-    background: #222;
+    background: #181818;
     border-radius: 16px;
-    padding: 16px 0 8px 0;
+    padding: 24px 40px 24px 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-top: 0;
     min-width: 320px;
   }
   .stack-title {
-    color: #aaa;
+    color: #fff;
     font-size: 1em;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    margin-right: 18px;
   }
   .stack-icons {
     display: flex;
@@ -202,7 +204,7 @@ body {
       margin: 0 auto;
     }
     .work-container {
-      padding: 32px 16px 24px 16px;
+      padding: 16px;
     }
     .stack-container {
       margin-top: 16px;
