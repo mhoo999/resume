@@ -1,15 +1,12 @@
 body {
-    background: #eaeaea;
+    background: #111;
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
   }
   .container {
     max-width: 1100px;
     margin: 40px auto;
-    border-radius: 30px;
     overflow: hidden;
-    background: #111;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     padding: 32px;
   }
   .row {
@@ -159,7 +156,6 @@ body {
     font-size: 1em;
   }
   .stack-container {
-    width: 100%;
     background: #181818;
     border-radius: 16px;
     padding: 24px 40px 24px 40px;
@@ -180,13 +176,8 @@ body {
     gap: 12px;
     overflow-x: auto;
     flex-wrap: nowrap;
-    width: 100%;
-    justify-content: left;
-  }
-  .stack-icons img {
-    border-radius: 8px;
-    background: #fff;
-    padding: 4px;
+    width: auto;
+    box-sizing: border-box;
   }
   .stack-icon {
     background: #fff;
@@ -212,7 +203,6 @@ body {
     .container {
       padding: 16px;
       margin: 0px;
-      border-radius: 0px;
     }
     .row {
       flex-direction: column;
@@ -247,8 +237,8 @@ body {
       gap: 8px;
     }
     .stack-icons img {
-      min-width: 60px;
-      min-height: 60px;
+      min-width: 40px;
+      min-height: 40px;
     }
     *, *::before, *::after {
       box-sizing: border-box;
