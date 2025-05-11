@@ -162,19 +162,21 @@ body {
   }
   .stack-title {
     color: #fff;
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: 0;
-    margin-right: 18px;
+    margin-right: 40px;
   }
   .stack-icons {
     display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 12px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: left;
   }
   .stack-icons img {
-    width: 32px;
-    height: 32px;
+    min-width: 60px;
+    min-height: 60px;
     border-radius: 8px;
     background: #fff;
     padding: 4px;
@@ -206,11 +208,20 @@ body {
       margin: 0 auto;
       padding: 16px;
     }
+    .info-container {
+      min-height: auto;
+    }
+    .profile-info,
+    .links {
+      margin-bottom: 16px;
+    }
+    .download-btn {
+      display: none;
+    }
+    .stack-title {
+      margin-right: 24px;
+    }
     .stack-icons {
-      overflow-x: auto;
-      flex-wrap: nowrap;
-      width: 100%;
-      justify-content: left;
       gap: 8px;
     }
     .stack-icons img {
