@@ -184,6 +184,8 @@ body {
   @media (max-width: 900px) {
     .container {
       padding: 16px;
+      margin: 0px;
+      border-radius: 0px;
     }
     .row {
       flex-direction: column;
@@ -208,6 +210,9 @@ body {
     }
     .stack-container {
       margin-top: 16px;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
   }
 
