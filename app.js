@@ -25,7 +25,7 @@ function setContactInfo(email, phone) {
   const contact = document.querySelector('.contact');
   if (!contact) return;
   contact.innerHTML = `
-    <div><b style="color:#2d5be3;">Email</b> ${email}</div>
+    <div><b>Email</b> ${email}</div>
     <div><b>Phone</b> ${phone}</div>
   `;
 }
@@ -53,6 +53,14 @@ function setDownloadButton(text, onClick) {
     btn.onclick = onClick;
   }
 }
+
+function setAboutMe(test) {
+    const aboutMe = document.querySelector('.aboutme-container');
+    if (!aboutMe) return;
+    aboutMe.innerHTML = `
+      <div>${test}</div>
+    `;
+  }
 
 // 범용 섹션 추가 함수 (경력, 교육 등)
 function setSection(containerSelector, sectionTitle, items) {
@@ -109,6 +117,12 @@ window.addEventListener('DOMContentLoaded', function() {
       title: '게임 개발자',
       date: '2024 - 2024',
       desc: '게임 로직 설계 및 UI 개발.'
+    },
+    {
+      company: '아이락 커뮤니케이션',
+      title: '기획자',
+      date: '2021 - 2023',
+      desc: '프로젝트 기획 및 관리, 화면 설계, 요구사항정의서 작성 등'
     }
   ]);
 
@@ -127,5 +141,7 @@ window.addEventListener('DOMContentLoaded', function() {
       desc: 'Unreal Engine, C++ 기본 문법 학습 및 게임 개발 프로젝트 진행.'
     }
   ]);
+  
+  setAboutMe('안녕하세요. 유명훈입니다. 백엔드 개발자를 꿈꾸는 대학생입니다.');
 });
 
