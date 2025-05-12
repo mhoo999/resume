@@ -153,6 +153,7 @@ body.dark-mode .sections-container h2 {
   color: #000;
   border-radius: 24px;
   padding: 24px;
+  line-height: 1.5;
 }
 body.dark-mode .aboutme-container {
   background: #222;
