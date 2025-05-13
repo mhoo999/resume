@@ -118,12 +118,19 @@ window.addEventListener('DOMContentLoaded', function() {
   document.body.classList.add('dark-mode');
 
   // stack icons
-  addStackIcon('assets/stack-cpp.svg', 'cpp');
-  addStackIcon('assets/stack-csharp.svg', 'csharp');
+  addStackIcon('assets/stack-html5.svg', 'html5');
+  addStackIcon('assets/stack-css.svg', 'css');
+  addStackIcon('assets/stack-javascript.svg', 'javascript');
+  addStackIcon('assets/stack-react.svg', 'react');
   addStackIcon('assets/stack-java.svg', 'java');
   addStackIcon('assets/stack-spring.svg', 'spring');
-  addStackIcon('assets/stack-python.svg', 'python');
   addStackIcon('assets/stack-mysql.svg', 'mysql');
+  addStackIcon('assets/stack-cpp.svg', 'cpp');
+  addStackIcon('assets/stack-csharp.svg', 'csharp');
+  addStackIcon('assets/stack-python.svg', 'python');
+  addStackIcon('assets/stack-aws.svg', 'aws');
+  addStackIcon('assets/stack-docker.svg', 'docker');
+  addStackIcon('assets/stack-kubernetes.svg', 'kubernetes');
 
   // info-container 동적 데이터 예시
   setProfileInfo('유명훈', '풀스택 개발자');
