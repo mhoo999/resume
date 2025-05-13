@@ -121,6 +121,7 @@ window.addEventListener('DOMContentLoaded', function() {
   addStackIcon('assets/stack-html5.svg', 'html5');
   addStackIcon('assets/stack-css.svg', 'css');
   addStackIcon('assets/stack-javascript.svg', 'javascript');
+  addStackIcon('assets/stack-node-js.svg', 'node-js');
   addStackIcon('assets/stack-react.svg', 'react');
   addStackIcon('assets/stack-java.svg', 'java');
   addStackIcon('assets/stack-spring.svg', 'spring');
