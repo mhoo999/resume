@@ -241,15 +241,15 @@ window.addEventListener('DOMContentLoaded', function() {
   addPortfolioItems([
     {
       title: 'Lets-try',
-      tags: ['개인 프로젝트', '2일', '프론트엔드 개발', 'UI/UX 디자인'],
-      description: '프로젝트에 대한 설명을 입력하세요.',
-      demo: 'https://demo-link.com',
-      github: 'https://github.com/username/project1'
+      tags: ['개인 프로젝트', '바이브 코딩'],
+      description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- 바이브코딩으로 진행한 반지 시뮬레이션 서비스<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
+      demo: 'https://lets-try-mu.vercel.app/',
+      github: 'https://github.com/mhoo999/lets-try'
     },
     {
-      title: '프로젝트 2',
-      tags: ['팀 프로젝트', '4명', '풀스택 개발', '기획'],
-      description: '프로젝트에 대한 설명을 입력하세요.',
+      title: '타임 딜 서비스',
+      tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
+      description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제<br>- 프로모션은 엔티티 생성 시에 설정한 시작 날짜부터 종료 날짜까지<br>특정 상품에 할인을 적용하여 판매하는 기능을 함.<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 시작 날짜와 종료<br>날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화하거나<br>비활성화.<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을<br>사용하여 구현.',
       demo: '',
       github: 'https://github.com/username/project2'
     }
