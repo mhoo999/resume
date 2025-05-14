@@ -120,13 +120,17 @@ function addPortfolioItems(items) {
   items.forEach(item => {
     const itemDiv = document.createElement('div');
     itemDiv.className = 'portfolio-item';
+    
+    // scale과 role 태그들을 생성
+    const scaleTags = Array.isArray(item.scale) ? item.scale : [item.scale];
+    const roleTags = Array.isArray(item.role) ? item.role : [item.role];
+    
     itemDiv.innerHTML = `
       <div class="portfolio-item-content">
         <h3>${item.title}</h3>
         <div class="portfolio-meta">
-          <span class="portfolio-period">${item.period}</span>
-          <span class="portfolio-scale">${item.scale}</span>
-          <span class="portfolio-role">${item.role}</span>
+          ${scaleTags.map(scale => `<span class="portfolio-scale">${scale}</span>`).join('')}
+          ${roleTags.map(role => `<span class="portfolio-role">${role}</span>`).join('')}
         </div>
         <p>${item.description}</p>
         <div class="portfolio-links">
@@ -238,19 +242,17 @@ window.addEventListener('DOMContentLoaded', function() {
   // 포트폴리오 아이템 추가
   addPortfolioItems([
     {
-      title: '프로젝트 1',
-      period: '2024.01 - 2024.03',
-      scale: '팀 프로젝트 (4명)',
-      role: '프론트엔드 개발',
+      title: 'Lets-try',
+      scale: ['개인 프로젝트', '2일'],
+      role: ['프론트엔드 개발', 'UI/UX 디자인'],
       description: '프로젝트에 대한 설명을 입력하세요.',
       demo: 'https://demo-link.com',
       github: 'https://github.com/username/project1'
     },
     {
       title: '프로젝트 2',
-      period: '2024.02 - 2024.04',
-      scale: '개인 프로젝트',
-      role: '풀스택 개발',
+      scale: ['팀 프로젝트', '4명'],
+      role: ['풀스택 개발', '기획'],
       description: '프로젝트에 대한 설명을 입력하세요.',
       demo: '',
       github: 'https://github.com/username/project2'

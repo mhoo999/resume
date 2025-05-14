@@ -333,7 +333,6 @@ body.dark-mode .portfolio-item-content p {
   font-size: 0.9em;
 }
 
-.portfolio-period,
 .portfolio-scale,
 .portfolio-role {
   color: #666;
@@ -342,7 +341,6 @@ body.dark-mode .portfolio-item-content p {
   border-radius: 20px;
 }
 
-body.dark-mode .portfolio-period,
 body.dark-mode .portfolio-scale,
 body.dark-mode .portfolio-role {
   color: #aaa;
