@@ -356,6 +356,7 @@ body.dark-mode .portfolio-tag {
 }
 
 .portfolio-link {
+  margin-top: 2em;
   padding: 8px 16px;
   background: #2d5be3;
   color: #fff;
