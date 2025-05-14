@@ -121,16 +121,14 @@ function addPortfolioItems(items) {
     const itemDiv = document.createElement('div');
     itemDiv.className = 'portfolio-item';
     
-    // scale과 role 태그들을 생성
-    const scaleTags = Array.isArray(item.scale) ? item.scale : [item.scale];
-    const roleTags = Array.isArray(item.role) ? item.role : [item.role];
+    // 모든 태그를 하나의 배열로 통합
+    const tags = Array.isArray(item.tags) ? item.tags : [];
     
     itemDiv.innerHTML = `
       <div class="portfolio-item-content">
         <h3>${item.title}</h3>
         <div class="portfolio-meta">
-          ${scaleTags.map(scale => `<span class="portfolio-scale">${scale}</span>`).join('')}
-          ${roleTags.map(role => `<span class="portfolio-role">${role}</span>`).join('')}
+          ${tags.map(tag => `<span class="portfolio-tag">${tag}</span>`).join('')}
         </div>
         <p>${item.description}</p>
         <div class="portfolio-links">
@@ -243,16 +241,14 @@ window.addEventListener('DOMContentLoaded', function() {
   addPortfolioItems([
     {
       title: 'Lets-try',
-      scale: ['개인 프로젝트', '2일'],
-      role: ['프론트엔드 개발', 'UI/UX 디자인'],
+      tags: ['개인 프로젝트', '2일', '프론트엔드 개발', 'UI/UX 디자인'],
       description: '프로젝트에 대한 설명을 입력하세요.',
       demo: 'https://demo-link.com',
       github: 'https://github.com/username/project1'
     },
     {
       title: '프로젝트 2',
-      scale: ['팀 프로젝트', '4명'],
-      role: ['풀스택 개발', '기획'],
+      tags: ['팀 프로젝트', '4명', '풀스택 개발', '기획'],
       description: '프로젝트에 대한 설명을 입력하세요.',
       demo: '',
       github: 'https://github.com/username/project2'

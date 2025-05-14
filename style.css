@@ -333,16 +333,14 @@ body.dark-mode .portfolio-item-content p {
   font-size: 0.9em;
 }
 
-.portfolio-scale,
-.portfolio-role {
+.portfolio-tag {
   color: #666;
   background: #f5f5f5;
   padding: 4px 12px;
   border-radius: 20px;
 }
 
-body.dark-mode .portfolio-scale,
-body.dark-mode .portfolio-role {
+body.dark-mode .portfolio-tag {
   color: #aaa;
   background: #333;
 }
