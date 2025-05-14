@@ -112,6 +112,39 @@ function downloadResumeAsPDF() {
   });
 }
 
+// 포트폴리오 아이템 추가 함수
+function addPortfolioItems(items) {
+  const portfolioItems = document.querySelector('.portfolio-items');
+  if (!portfolioItems) return;
+  
+  items.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'portfolio-item';
+    itemDiv.innerHTML = `
+      <div class="portfolio-item-content">
+        <h3>${item.title}</h3>
+        <div class="portfolio-meta">
+          <span class="portfolio-period">${item.period}</span>
+          <span class="portfolio-scale">${item.scale}</span>
+          <span class="portfolio-role">${item.role}</span>
+        </div>
+        <p>${item.description}</p>
+        <div class="portfolio-links">
+          ${item.demo ? 
+            `<a href="${item.demo}" target="_blank" rel="noopener noreferrer" class="portfolio-link">Demo</a>` : 
+            `<button class="portfolio-link disabled" disabled>Demo</button>`
+          }
+          ${item.github ? 
+            `<a href="${item.github}" target="_blank" rel="noopener noreferrer" class="portfolio-link">GitHub</a>` : 
+            `<button class="portfolio-link disabled" disabled>GitHub</button>`
+          }
+        </div>
+      </div>
+    `;
+    portfolioItems.appendChild(itemDiv);
+  });
+}
+
 // Devicon CDN의 SVG 아이콘 사용 및 info-container 동적 데이터 예시
 window.addEventListener('DOMContentLoaded', function() {
   // 기본 다크모드 적용
@@ -201,5 +234,27 @@ window.addEventListener('DOMContentLoaded', function() {
       fab.querySelector('img').style.filter = 'invert(1)';
     }
   });
+
+  // 포트폴리오 아이템 추가
+  addPortfolioItems([
+    {
+      title: '프로젝트 1',
+      period: '2024.01 - 2024.03',
+      scale: '팀 프로젝트 (4명)',
+      role: '프론트엔드 개발',
+      description: '프로젝트에 대한 설명을 입력하세요.',
+      demo: 'https://demo-link.com',
+      github: 'https://github.com/username/project1'
+    },
+    {
+      title: '프로젝트 2',
+      period: '2024.02 - 2024.04',
+      scale: '개인 프로젝트',
+      role: '풀스택 개발',
+      description: '프로젝트에 대한 설명을 입력하세요.',
+      demo: '',
+      github: 'https://github.com/username/project2'
+    }
+  ]);
 });
 

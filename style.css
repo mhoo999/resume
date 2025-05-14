@@ -269,6 +269,111 @@ body.dark-mode .portfolio {
   margin-bottom: 16px;
 }
 
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .portfolio-item {
+  background: #222;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.4em;
+}
+
+.portfolio-item-content p {
+  margin: 0 0 16px 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+body.dark-mode .portfolio-item-content p {
+  color: #ccc;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 12px;
+}
+
+.portfolio-links a {
+  padding: 8px 16px;
+  background: #2d5be3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9em;
+  transition: background 0.2s;
+}
+
+.portfolio-links a:hover {
+  background: #1e4bc7;
+}
+
+.portfolio-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.9em;
+}
+
+.portfolio-period,
+.portfolio-scale,
+.portfolio-role {
+  color: #666;
+  background: #f5f5f5;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+body.dark-mode .portfolio-period,
+body.dark-mode .portfolio-scale,
+body.dark-mode .portfolio-role {
+  color: #aaa;
+  background: #333;
+}
+
+.portfolio-link {
+  padding: 8px 16px;
+  background: #2d5be3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9em;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.portfolio-link:hover {
+  background: #1e4bc7;
+}
+
+.portfolio-link.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+body.dark-mode .portfolio-link.disabled {
+  background: #444;
+}
 
 /* 모바일 반응형 */
 @media (max-width: 900px) {
