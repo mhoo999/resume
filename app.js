@@ -88,28 +88,13 @@ function setSection(containerSelector, sectionTitle, items) {
 }
 
 function downloadResumeAsPDF() {
-  const target = document.querySelector('.container'); // 이력서 전체를 감싸는 div
-  if (!target) return;
-
-  html2canvas(target, { scale: 2 }).then(canvas => {
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new window.jspdf.jsPDF({
-      orientation: 'portrait',
-      unit: 'mm',
-      format: 'a4'
-    });
-
-    // A4 크기(mm)
-    const pageWidth = 210;
-    const pageHeight = 297;
-
-    // 캔버스 비율에 맞게 이미지 크기 계산
-    const imgWidth = pageWidth;
-    const imgHeight = canvas.height * imgWidth / canvas.width;
-
-    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-    pdf.save('resume.pdf');
-  });
+  // assets/RESUME.pdf 파일을 직접 다운로드
+  const link = document.createElement('a');
+  link.href = 'assets/RESUME.pdf';
+  link.download = 'RESUME.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 // 포트폴리오 아이템 추가 함수
@@ -189,13 +174,13 @@ window.addEventListener('DOMContentLoaded', function() {
       company: '네오락',
       title: '게임 개발자',
       date: '2024 - 2024',
-      desc: '게임 로직 설계 및 UI 개발.'
+      desc: '- 실시간 전략 시뮬레이션 게임에서 캐릭터 계약, 배치, 전투 참여 UI 전반을 설계 및 개발<br>- 캐릭터 정보를 실시간으로 조회하고, 각 건물/전투에 배치하는 인터페이스 구현<br>- UI 컴포넌트를 모듈화하여 재사용성과 유지보수성 확보'
     },
     {
       company: '아이락 커뮤니케이션',
       title: '기획자',
       date: '2021 - 2023',
-      desc: '프로젝트 기획 및 관리, 화면 설계, 요구사항정의서 작성 등'
+      desc: '- LF 물류센터 WMS 구축 프로젝트에 기획자로 참여, 현장 인터뷰 및 실무 프로세스 분석 수행<br>- 현대자동차 임직원 대상 사내 차량 대여 키오스크 앱 화면 설계 전담<br>- ETRI가 주관하는 산업현장 인공지능 플랫폼 프로젝트에 컨소시엄으로 참여하여 화면 설계를 담당'
     }
   ]);
 
@@ -205,13 +190,13 @@ window.addEventListener('DOMContentLoaded', function() {
       school: '청년취업 사관학교',
       degree: 'MSA 기반 자바 개발자 과정',
       date: '2025 - 2025',
-      desc: '프론트엔드, 백엔드, 데이터베이스, 클라우드 인프라(AWS) 등 전반적인 개발 환경 구축 및 개발 경험.'
+      desc: '- HTML/CSS/JavaScript, React/Next.js, TypeScript 프론트엔드 개발 방법<br>- 자바 프로그래밍, SpringBoot/SpringMVC/SpringSecurity, 데이터베이스 및 SQL 활용<br>- Linux, Docker, Kubernetes, Jenkins, AWS 서비스 및 배포'
     },
     {
       school: '스파르타 코딩클럽',
       degree: 'Spring 백엔드 개발자 과정',
       date: '2024 - 2025',
-      desc: '자바 기본 문법 및 스프링 프레임워크 학습. JPA, Spring Security, JWT 등 활용.'
+      desc: '- 자바 문법 및 객체지향 프로그래밍, 자료구조, 데이터베이스<br>- 자바 스프링, JPA, QueryDSL, RESTful API 설계 및 개발<br>- Docker, CI/CD 파이프라인, AWS 클라우드 환경에서의 서비스 배포'
     },
     // {
     //   school: '청년취업 사관학교',
