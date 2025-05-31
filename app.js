@@ -258,5 +258,34 @@ window.addEventListener('DOMContentLoaded', function() {
       github: 'https://github.com/mhoo999/newsfeed'
     }
   ]);
+
+  // stack-icons 드래그 스크롤 기능 추가
+  const stackIcons = document.querySelector('.stack-icons');
+  if (stackIcons) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    stackIcons.addEventListener('mousedown', (e) => {
+      isDown = true;
+      stackIcons.classList.add('active');
+      startX = e.pageX - stackIcons.offsetLeft;
+      scrollLeft = stackIcons.scrollLeft;
+    });
+    stackIcons.addEventListener('mouseleave', () => {
+      isDown = false;
+      stackIcons.classList.remove('active');
+    });
+    stackIcons.addEventListener('mouseup', () => {
+      isDown = false;
+      stackIcons.classList.remove('active');
+    });
+    stackIcons.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - stackIcons.offsetLeft;
+      const walk = (x - startX) * 1.5; // 스크롤 속도 조절
+      stackIcons.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
 

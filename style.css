@@ -219,9 +219,11 @@ body.dark-mode .stack-container {
   box-sizing: border-box;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  cursor: grab;
+  user-select: none;
+}
+.stack-icons:active {
+  cursor: grabbing;
 }
 .stack-icon {
   background: #fff;
