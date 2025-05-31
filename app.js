@@ -112,6 +112,7 @@ function addPortfolioItems(items) {
     itemDiv.innerHTML = `
       <div class="portfolio-item-content">
         <h3>${item.title}</h3>
+        <div class="portfolio-summary" style="font-size:0.98em;color:#aaa;margin-bottom:15px;">${item.summary || ''}</div>
         <div class="portfolio-meta">
           ${tags.map(tag => `<span class="portfolio-tag">${tag}</span>`).join('')}
         </div>
@@ -226,29 +227,33 @@ window.addEventListener('DOMContentLoaded', function() {
   addPortfolioItems([
     {
       title: 'Lets-try',
+      summary: '반지 시뮬레이션 웹 서비스',
       tags: ['개인 프로젝트', '바이브 코딩'],
-      description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- 바이브코딩으로 진행한 반지 시뮬레이션 서비스<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
+      description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
       demo: 'https://lets-try-mu.vercel.app/',
       github: 'https://github.com/mhoo999/lets-try'
     },
     {
-      title: '타임 딜 서비스',
+      title: '딱 대기',
+      summary: '한정 수량의 상품을 세일하여 판매하는 상황을 가정한 주문/이벤트 API 프로젝트',
       tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
-      description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제<br>- 프로모션은 엔티티 생성 시에 설정한 시작 날짜부터 종료 날짜까지<br>특정 상품에 할인을 적용하여 판매하는 기능을 함.<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 시작 날짜와 종료<br>날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화하거나<br>비활성화.<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을<br>사용하여 구현.',
+      description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을<br>사용하여 구현',
       demo: '',
       github: 'https://github.com/mhoo999/ddakdaegi'
     },
     {
-      title: '배달 어플 서비스',
+      title: '배달 어플리케이션',
+      summary: '배달의 민족 애플리케이션과 같이 손님과 사장님 계정을 구분하여 주문/리뷰 기능을 구현한 프로젝트',
       tags: ['팀 프로젝트', '5명', 'Spring', 'JWT', '세션'],
-      description: '- Java Spring, JWT<br>- 계정 권한에 따른 기능을 분리.<br>- 손님 계정은 주문을 진행하고, 리뷰를 작성.<br>- 사장님 계정은 가게와 메뉴를 만들고, 주문을 받고 리뷰에 대댓글을<br>달 수 있도록 개발.<br>- 세션 기반 인증/인가 기능을 구현.',
+      description: '- Java Spring, JWT<br>- 계정 권한에 따른 기능을 분리<br>- 손님 계정은 주문을 진행하고, 리뷰를 작성<br>- 사장님 계정은 가게와 메뉴를 만들고, 주문을 받고 리뷰에 대댓글을 달 수 있도록 개발<br>- 세션 기반 인증/인가 기능을 구현',
       demo: '',
       github: 'https://github.com/mhoo999/outsourcing'
     },
     {
-      title: 'SNS 서비스',
+      title: 'Newsfeed',
+      summary: '친구 기반 피드 제공 SNS 서비스',
       tags: ['팀 프로젝트', '4명', 'Spring'],
-      description: '- Java Spring<br>- 회원가입, 로그인 기능부터 게시물 작성, 댓글 작성 기능.<br>- 친구 추가 기능을 만들어 친구 사용자의 게시물만 피드에서 볼 수 있는 기능을 개발.',
+      description: '- Java Spring<br>- 회원가입, 로그인 기능부터 게시물 작성, 댓글 작성 기능<br>- 친구 추가 기능을 만들어 친구 사용자의 게시물만 피드에서 볼 수 있는 기능을 개발',
       demo: '',
       github: 'https://github.com/mhoo999/newsfeed'
     }
