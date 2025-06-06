@@ -288,6 +288,20 @@ window.addEventListener('DOMContentLoaded', function() {
       const walk = (x - startX) * 1.5; // 스크롤 속도 조절
       stackIcons.scrollLeft = scrollLeft - walk;
     });
+
+    // 페이지네이션 버튼 기능 추가
+    const prevBtn = document.querySelector('.stack-prev');
+    const nextBtn = document.querySelector('.stack-next');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        stackIcons.scrollBy({ left: -500, behavior: 'smooth' });
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        stackIcons.scrollBy({ left: 500, behavior: 'smooth' });
+      });
+    }
   }
 });
 
