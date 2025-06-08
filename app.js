@@ -139,32 +139,32 @@ function setChatGPTRecommendation() {
   if (!container) return;
   container.innerHTML = `
     <div class="chatgpt-recommendation">
-      <div class="chatgpt-recommendation-title">chatGPT 추천사</div>
+      <div class="chatgpt-recommendation-title">🤖 chatGPT 추천사</div>
       <ol class="recommendation-list">
         <li>
           <b>목표지향적이고 실용적인 사람</b><br>
-          하고자 하는 바가 명확하고, 그에 따라 단계적으로 학습 계획을 세움.<br>
+          • 하고자 하는 바가 명확하고, 그에 따라 단계적으로 학습 계획을 세움.<br>
           <span class="recommendation-example">예: Spring Boot 집중 4주, SQLD → AWS SAA 자격증 순으로 준비.</span>
-          단순히 <b>배우는 것</b>보다 실제 서비스로 구현하려는 마인드가 강해요.<br>
+          • 단순히 <b>배우는 것</b>보다 실제 서비스로 구현하려는 마인드가 강해요.<br>
           <span class="recommendation-example">예: 실시간 텍스트 배틀, OAuth 로그인, Delay Queue 등 실전 중심 학습.</span>
         </li>
         <li>
           <b>기초를 중요시하면서도 응용력이 뛰어난 사람</b><br>
-          처음 Redis나 OAuth를 접했을 때도 단계별로 개념부터 확실히 잡고,<br>
+          • 처음 Redis나 OAuth를 접했을 때도 단계별로 개념부터 확실히 잡고,<br>
           이후엔 응용해서 다중 서버 환경까지 고려하는 등 확장 가능성을 염두에 둔 설계를 해요.<br>
-          단순한 기능 구현보다 <b>구조적 설계</b>와 <b>클린 코드</b>를 더 중요하게 생각하는 경향이 있음.
+          • 단순한 기능 구현보다 <b>구조적 설계</b>와 <b>클린 코드</b>를 더 중요하게 생각하는 경향이 있음.
         </li>
         <li>
           <b>꼼꼼하고 책임감이 강한 사람</b><br>
-          HTML, CSS, JS 작업 시에도 기존 코드 스타일을 절대 유지하려 함.<br>
+          • HTML, CSS, JS 작업 시에도 기존 코드 스타일을 절대 유지하려 함.<br>
           이는 당신이 작은 디테일에도 예민하고, 일관성과 품질에 대한 기준이 높은 사람임을 보여줘요.<br>
-          작업 요청 시 항상 최종 코드 전체를 요구하고, 부분 변경이 아닌 전체 흐름을 관리하려는 태도도 인상적입니다.
+          • 작업 요청 시 항상 최종 코드 전체를 요구하고, 부분 변경이 아닌 전체 흐름을 관리하려는 태도도 인상적입니다.
         </li>
         <li>
           <b>끊임없이 성장하려는 사람</b><br>
-          원래는 C++ 게임 개발 → Java Spring → 클라우드/AI 쪽으로 변화.<br>
+          • 원래는 C++ 게임 개발 → Java Spring → 클라우드/AI 쪽으로 변화.<br>
           이를 통해 유연한 사고와 자기 객관화 능력이 뛰어남을 알 수 있어요.<br>
-          취업에 대해 스스로 부족하다고 말하면서도, 포기하지 않고 공부하며 현실적인 돌파구를 찾는 모습은 성장 마인드셋을 가진 사람의 전형입니다.
+          • 취업에 대해 스스로 부족하다고 말하면서도, 포기하지 않고 공부하며 현실적인 돌파구를 찾는 모습은 성장 마인드셋을 가진 사람의 전형입니다.
         </li>
       </ol>
       <blockquote class="recommendation-summary">“현실을 정확히 바라보며, 치밀하고 책임감 있게 성장해나가는 개발자 지망생.”</blockquote>
