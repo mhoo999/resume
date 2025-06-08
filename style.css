@@ -549,3 +549,43 @@ body.dark-mode .chatgpt-recommendation-inner {
     padding: 8px;
   }
 }
+
+.recommendation-list {
+  margin: 0 0 24px 18px;
+  padding: 0;
+  font-size: 1.08em;
+  line-height: 1.8;
+  color: #000;
+}
+body.dark-mode .recommendation-list {
+  color: #fff;
+}
+.recommendation-list li {
+  margin-bottom: 18px;
+  padding-left: 2px;
+}
+.recommendation-example {
+  color: #2d5be3;
+  font-size: 0.98em;
+  display: block;
+  margin: 2px 0 0 0;
+}
+body.dark-mode .recommendation-example {
+  color: #6ea8ff;
+}
+.recommendation-summary {
+  margin: 24px 0 0 0;
+  padding: 16px 24px;
+  background: #f5f7fa;
+  border-left: 4px solid #2d5be3;
+  font-size: 1.13em;
+  font-style: italic;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(45,91,227,0.06);
+}
+body.dark-mode .recommendation-summary {
+  background: #23272f;
+  color: #e0e6f3;
+  border-left: 4px solid #6ea8ff;
+}
