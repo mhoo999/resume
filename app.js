@@ -241,7 +241,7 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
       description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을<br>사용하여 구현',
       demo: 'https://youtu.be/p4AiTCeyYo4',
-      github: 'https://github.com/mhoo999/ddakdaegi'
+      github: 'https://github.com/mhoo999/ddak-daegi'
     },
     {
       title: '배달 어플리케이션',
@@ -249,7 +249,7 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '5명', 'Spring', 'JWT', '세션'],
       description: '- Java Spring, JWT<br>- 계정 권한에 따른 기능을 분리<br>- 손님 계정은 주문을 진행하고, 리뷰를 작성<br>- 사장님 계정은 가게와 메뉴를 만들고, 주문을 받고 리뷰에 대댓글을 달 수 있도록 개발<br>- 세션 기반 인증/인가 기능을 구현',
       demo: 'https://youtu.be/Qy7XUUgAt7o',
-      github: 'https://github.com/mhoo999/outsourcing'
+      github: 'https://github.com/mhoo999/delivery-service'
     },
     {
       title: 'Newsfeed',
@@ -257,7 +257,7 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '4명', 'Spring'],
       description: '- Java Spring<br>- 회원가입, 로그인 기능부터 게시물 작성, 댓글 작성 기능<br>- 친구 추가 기능을 만들어 친구 사용자의 게시물만 피드에서 볼 수 있는 기능을 개발',
       demo: 'https://youtu.be/VIdJOUFs28w?si=0__PYSj-xTIPBUwW',
-      github: 'https://github.com/mhoo999/newsfeed'
+      github: 'https://github.com/mhoo999/news-feed'
     }
   ]);
 
