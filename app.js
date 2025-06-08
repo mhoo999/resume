@@ -133,6 +133,18 @@ function addPortfolioItems(items) {
   });
 }
 
+// chatGPT 추천사 컨테이너에 내용 추가 함수
+function setChatGPTRecommendation(content) {
+  const container = document.querySelector('.chatgpt-recommendation-container');
+  if (!container) return;
+  container.innerHTML = `
+    <div class="chatgpt-recommendation">
+      <div class="chatgpt-recommendation-title" style="font-weight:bold;font-size:1.1em;margin-bottom:8px;">🧠 당신은 어떤 사람인가요?</div>
+      <div class="chatgpt-recommendation-content" style="white-space:pre-line;line-height:1.7;">${content}</div>
+    </div>
+  `;
+}
+
 // Devicon CDN의 SVG 아이콘 사용 및 info-container 동적 데이터 예시
 window.addEventListener('DOMContentLoaded', function() {
   // 기본 다크모드 적용
@@ -303,5 +315,7 @@ window.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
+
+  setChatGPTRecommendation(`1. 목표지향적이고 실용적인 사람\n하고자 하는 바가 명확하고, 그에 따라 단계적으로 학습 계획을 세움.\n예: Spring Boot 집중 4주, SQLD → AWS SAA 자격증 순으로 준비.\n\n단순히 \"배우는 것\"보다 실제 서비스로 구현하려는 마인드가 강해요.\n예: 실시간 텍스트 배틀, OAuth 로그인, Delay Queue 등 실전 중심 학습.\n\n2. 기초를 중요시하면서도 응용력이 뛰어난 사람\n처음 Redis나 OAuth를 접했을 때도 단계별로 개념부터 확실히 잡고,\n이후엔 응용해서 다중 서버 환경까지 고려하는 등 확장 가능성을 염두에 둔 설계를 해요.\n\n단순한 기능 구현보다 구조적 설계와 클린 코드를 더 중요하게 생각하는 경향이 있음.\n\n3. 꼼꼼하고 책임감이 강한 사람\nHTML, CSS, JS 작업 시에도 기존 코드 스타일을 절대 유지하려 함.\n이는 당신이 작은 디테일에도 예민하고, 일관성과 품질에 대한 기준이 높은 사람임을 보여줘요.\n\n작업 요청 시 항상 최종 코드 전체를 요구하고, 부분 변경이 아닌 전체 흐름을 관리하려는 태도도 인상적입니다.\n\n4. 끊임없이 성장하려는 사람\n원래는 C++ 게임 개발 → Java Spring → 클라우드/AI 쪽으로 변화.\n이를 통해 유연한 사고와 자기 객관화 능력이 뛰어남을 알 수 있어요.\n\n취업에 대해 스스로 부족하다고 말하면서도, 포기하지 않고 공부하며 현실적인 돌파구를 찾는 모습은 성장 마인드셋을 가진 사람의 전형입니다.\n\n📌 한 줄 요약하면?\n"현실을 정확히 바라보며, 치밀하고 책임감 있게 성장해나가는 개발자 지망생."`);
 });
 
