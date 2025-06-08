@@ -135,7 +135,7 @@ function addPortfolioItems(items) {
 
 // chatGPT 추천사 컨테이너에 내용 추가 함수
 function setChatGPTRecommendation(content) {
-  const container = document.querySelector('.chatgpt-recommendation-container');
+  const container = document.querySelector('.chatgpt-recommendation-inner');
   if (!container) return;
   container.innerHTML = `
     <div class="chatgpt-recommendation">

@@ -480,20 +480,20 @@ body.dark-mode .stack-pagination:hover {
 /* ChatGPT 추천사 컨테이너 */
 .chatgpt-recommendation-container {
   max-width: 1100px;
-  margin: 32px auto 0 auto;
-  padding: 0 32px;
+  margin: 0 auto 0 auto;
+  padding: 24px;
 }
 
 .chatgpt-recommendation {
-  background: #e0e0e0;
+  background: #fff;
   border-radius: 24px;
-  padding: 32px 24px;
+  padding: 24px;
   color: #000;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  margin-bottom: 32px;
+  
 }
 body.dark-mode .chatgpt-recommendation {
-  background: #181818;
+  background: #222;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 
@@ -517,7 +517,7 @@ body.dark-mode .chatgpt-recommendation-content {
 
 @media (max-width: 900px) {
   .chatgpt-recommendation-container {
-    padding: 0 8px;
+    padding: 8px;
   }
   .chatgpt-recommendation {
     padding: 20px 8px;
@@ -525,5 +525,27 @@ body.dark-mode .chatgpt-recommendation-content {
   }
   .chatgpt-recommendation-title {
     font-size: 1.1em;
+  }
+}
+
+.chatgpt-recommendation-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  background: #e0e0e0;
+}
+body.dark-mode .chatgpt-recommendation-inner {
+  background: #181818;
+}
+
+@media (max-width: 900px) {
+  .chatgpt-recommendation-inner {
+    padding: 8px;
   }
 }
