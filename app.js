@@ -190,7 +190,7 @@ window.addEventListener('DOMContentLoaded', function() {
   addStackIcon('assets/stack-cpp.svg', 'cpp');
   addStackIcon('assets/stack-csharp.svg', 'csharp');
   addStackIcon('assets/stack-python.svg', 'python');
-  addStackIcon('assets/stack-aws.svg', 'aws');
+  // addStackIcon('assets/stack-aws.svg', 'aws');
   // addStackIcon('assets/stack-docker.svg', 'docker');
   // addStackIcon('assets/stack-kubernetes.svg', 'kubernetes');
   addStackIcon('assets/stack-unreal-engine.svg', 'unreal-engine');
