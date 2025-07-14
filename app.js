@@ -267,20 +267,20 @@ window.addEventListener('DOMContentLoaded', function() {
   // 포트폴리오 아이템 추가
   addPortfolioItems([
     {
-      title: 'Lets-try',
-      summary: '반지 시뮬레이션 웹 서비스',
-      tags: ['개인 프로젝트', '시뮬레이터', '손가락 인식'],
-      description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
-      demo: 'https://lets-try-mu.vercel.app/',
-      github: 'https://github.com/mhoo999/lets-try'
-    },
-    {
       title: 'Book Manager',
       summary: '도서 관리 시스템 - 프론트엔드와 백엔드 분리 아키텍처',
       tags: ['팀 프로젝트', '4명', 'Spring', 'React', '풀스택'],
       description: '- Java Spring Boot (백엔드), React (프론트엔드)<br>- RESTful API 설계 및 구현으로 프론트엔드와 백엔드 분리<br>- 도서 등록, 조회, 수정, 삭제 기능 구현<br>- 사용자 인증 및 권한 관리 시스템<br>- 데이터베이스 설계 및 연동',
       demo: null,
       github: 'https://github.com/mhoo999/book-manager-backend'
+    },
+    {
+      title: 'Lets-try',
+      summary: '반지 시뮬레이션 웹 서비스',
+      tags: ['개인 프로젝트', '시뮬레이터', '손가락 인식'],
+      description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
+      demo: 'https://lets-try-mu.vercel.app/',
+      github: 'https://github.com/mhoo999/lets-try'
     },
     {
       title: '딱 대기',
