@@ -275,6 +275,14 @@ window.addEventListener('DOMContentLoaded', function() {
       github: 'https://github.com/mhoo999/lets-try'
     },
     {
+      title: 'Book Manager',
+      summary: '도서 관리 시스템 - 프론트엔드와 백엔드 분리 아키텍처',
+      tags: ['팀 프로젝트', '4명', 'Spring', 'React', '풀스택'],
+      description: '- Java Spring Boot (백엔드), React (프론트엔드)<br>- RESTful API 설계 및 구현으로 프론트엔드와 백엔드 분리<br>- 도서 등록, 조회, 수정, 삭제 기능 구현<br>- 사용자 인증 및 권한 관리 시스템<br>- 데이터베이스 설계 및 연동',
+      demo: null,
+      github: 'https://github.com/mhoo999/book-manager-backend'
+    },
+    {
       title: '딱 대기',
       summary: '한정 수량의 상품을 세일하여 판매하는 상황을 가정한 주문/이벤트 API 프로젝트',
       tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
