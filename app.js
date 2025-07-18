@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', function() {
     },
     {
       school: '청년취업 사관학교',
-      degree: 'XR 콘텐츠 개발자 과정',
+      degree: '언리얼엔진 개발자 과정',
       date: '2023 - 2024',
       desc: '- C++, 언리얼 엔진 5 기반 3D 콘텐츠 제작 및 최적화<br>- VR 인터랙션, 네트워크 통신, 메타버스 프로젝트 구현<br>- 팀 프로젝트 중심의 실전형 커리큘럼 수료'
     }
