@@ -176,13 +176,13 @@ window.addEventListener('DOMContentLoaded', function() {
     {
       company: '네오락',
       title: '게임 개발자',
-      date: '2024 - 2024',
+      date: '2024.09 - 2024.11 (3개월)',
       desc: '- 실시간 전략 시뮬레이션 게임에서 캐릭터 계약, 배치, 전투 참여 UI 전반을 설계 및 개발<br>- 캐릭터 정보를 실시간으로 조회하고, 각 건물/전투에 배치하는 인터페이스 구현<br>- UI 컴포넌트를 모듈화하여 재사용성과 유지보수성 확보'
     },
     {
       company: '아이락 커뮤니케이션',
       title: '기획자',
-      date: '2021 - 2023',
+      date: '2021.06 - 2023.08 (2년 2개월)',
       desc: '- LF 물류센터 WMS 구축 프로젝트에 기획자로 참여, 현장 인터뷰 및 실무 프로세스 분석 수행<br>- 현대자동차 임직원 대상 사내 차량 대여 키오스크 앱 화면 설계 전담<br>- ETRI가 주관하는 산업현장 인공지능 플랫폼 프로젝트에 컨소시엄으로 참여하여 화면 설계를 담당'
     }
   ]);
@@ -192,19 +192,19 @@ window.addEventListener('DOMContentLoaded', function() {
     {
       school: '청년취업 사관학교',
       degree: 'MSA 기반 자바 개발자 과정',
-      date: '2025 - 2025',
+      date: '2025.04 - 2025.11 (7개월)',
       desc: '- HTML/CSS/JavaScript, React/Next.js, TypeScript 프론트엔드 개발 방법<br>- 자바 프로그래밍, SpringBoot/SpringMVC/SpringSecurity, 데이터베이스 및 SQL 활용<br>- Linux, Docker, Kubernetes, Jenkins, AWS 서비스 및 배포'
     },
     {
       school: '스파르타 코딩클럽',
       degree: 'Spring 백엔드 개발자 과정',
-      date: '2024 - 2025',
+      date: '2024.12 - 2025.04 (5개월) ',
       desc: '- 자바 문법 및 객체지향 프로그래밍, 자료구조, 데이터베이스<br>- 자바 스프링, JPA, QueryDSL, RESTful API 설계 및 개발<br>- Docker, CI/CD 파이프라인, AWS 클라우드 환경에서의 서비스 배포'
     },
     {
       school: '청년취업 사관학교',
       degree: '언리얼엔진 개발자 과정',
-      date: '2023 - 2024',
+      date: '2023.08 - 2024.03 (7개월)',
       desc: '- C++, 언리얼 엔진 5 기반 3D 콘텐츠 제작 및 최적화<br>- VR 인터랙션, 네트워크 통신, 메타버스 프로젝트 구현<br>- 팀 프로젝트 중심의 실전형 커리큘럼 수료'
     }
   ]);
