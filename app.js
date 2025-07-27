@@ -62,6 +62,8 @@ function setAboutMe(test) {
     `;
   }
 
+
+
 // 범용 섹션 추가 함수 (경력, 교육 등)
 function setSection(containerSelector, sectionTitle, items) {
   // containerSelector: 섹션을 넣을 컨테이너 선택자 (예: '.work-container', '.education-container')
