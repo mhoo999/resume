@@ -11,8 +11,6 @@ function addStackIcon(src, alt = '') {
   stackIcons.appendChild(iconDiv);
 }
 
-
-
 // info-container 내부에 이름, 직함, 연락처, 링크, 버튼 등을 동적으로 추가하는 함수들
 function setProfileInfo(name, title) {
   const info = document.querySelector('.profile-info');
