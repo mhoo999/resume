@@ -21,6 +21,7 @@ function setProfileInfo(name, title) {
   `;
 }
 
+
 function setContactInfo(email, phone) {
   const contact = document.querySelector('.contact');
   if (!contact) return;
