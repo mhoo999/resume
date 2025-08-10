@@ -346,19 +346,19 @@ window.addEventListener('DOMContentLoaded', function() {
       demo: 'https://lets-try-mu.vercel.app/',
       github: 'https://github.com/mhoo999/lets-try'
     },
-    {
-      title: '딱 대기',
-      summary: '한정 수량의 상품을 세일하여 판매하는 상황을 가정한 주문/이벤트 API 프로젝트',
-      tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
-      description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을 사용하여 구현',
-      images: [
-        { url: 'assets/ddak-daegi/1.png', text: '아키텍처' },
-        { url: 'assets/ddak-daegi/2.png', text: '일정 시간 동안 이벤트 활성화' },
-        { url: 'assets/ddak-daegi/3.jpg', text: '재고 수량 내에서 한정판매 진행' },
-      ],
-      demo: 'https://youtu.be/p4AiTCeyYo4',
-      github: 'https://github.com/mhoo999/ddak-daegi'
-    },
+    // {
+    //   title: '딱 대기',
+    //   summary: '한정 수량의 상품을 세일하여 판매하는 상황을 가정한 주문/이벤트 API 프로젝트',
+    //   tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
+    //   description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을 사용하여 구현',
+    //   images: [
+    //     { url: 'assets/ddak-daegi/1.png', text: '아키텍처' },
+    //     { url: 'assets/ddak-daegi/2.png', text: '일정 시간 동안 이벤트 활성화' },
+    //     { url: 'assets/ddak-daegi/3.jpg', text: '재고 수량 내에서 한정판매 진행' },
+    //   ],
+    //   demo: 'https://youtu.be/p4AiTCeyYo4',
+    //   github: 'https://github.com/mhoo999/ddak-daegi'
+    // },
     {
       title: '배달 어플리케이션',
       summary: '배달의 민족 애플리케이션과 같이 손님과 사장님 계정을 구분하여 주문/리뷰 기능을 구현한 프로젝트',
