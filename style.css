@@ -424,7 +424,7 @@ body.dark-mode .portfolio-link.disabled {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 10px 0;
+  padding: 25px 10px;
   scrollbar-width: thin;
   scrollbar-color: #ccc transparent;
   height: 450px;
@@ -461,6 +461,7 @@ body.dark-mode .portfolio-link.disabled {
   transition: transform 0.2s ease, border-color 0.2s ease;
   flex-shrink: 0;
   cursor: pointer;
+  margin: 10px;
 }
 
 .portfolio-image:hover {

@@ -117,7 +117,16 @@ function addPortfolioItems(items) {
         <div class="portfolio-summary" style="font-size:0.98em;color:#aaa;margin-bottom:15px;">${item.summary || ''}</div>
         ${item.images && item.images.length > 0 ? `
           <div class="portfolio-images-container">
-            ${item.images.map((img, index) => `<img src="${img}" alt="${item.title} 이미지 ${index + 1}" class="portfolio-image" data-image-src="${img}" data-image-title="${item.title}">`).join('')}
+            ${item.images.map((img, index) => {
+              // 이미지가 객체인지 문자열인지 확인
+              if (typeof img === 'object' && img.url && img.text) {
+                // {url, text} 형태인 경우
+                return `<img src="${img.url}" alt="${img.text}" class="portfolio-image" data-image-src="${img.url}" data-image-title="${img.text}">`;
+              } else {
+                // 기존 문자열 형태인 경우
+                return `<img src="${img}" alt="${item.title} 이미지 ${index + 1}" class="portfolio-image" data-image-src="${img}" data-image-title="${item.title}">`;
+              }
+            }).join('')}
           </div>
         ` : ''}
         <div class="portfolio-meta">
@@ -310,18 +319,13 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '4명', 'Spring', 'React', '풀스택'],
       description: '- Java Spring Boot (백엔드), React (프론트엔드)<br>- RESTful API 설계 및 구현으로 프론트엔드와 백엔드 분리<br>- 도서 등록, 조회, 수정, 삭제 기능 구현<br>- 사용자 인증 및 권한 관리 시스템<br>- 데이터베이스 설계 및 연동',
       images: [
-        'assets/book-manager/1.png',
-        'assets/book-manager/2.png',
-        'assets/book-manager/3.png',
-        'assets/book-manager/4.png',
-        'assets/book-manager/5.png',
-        'assets/book-manager/6.png',
-        'assets/book-manager/7.png',
-        'assets/book-manager/8.png',
-        'assets/book-manager/9.png',
-        'assets/book-manager/10.png',
-        'assets/book-manager/11.png',
-        'assets/book-manager/12.png',
+        { url: 'assets/book-manager/1.png', text: 'Book Manager 메인 화면' },
+        { url: 'assets/book-manager/2.png', text: '도서 목록 조회' },
+        { url: 'assets/book-manager/3.png', text: '도서 상세 정보' },
+        { url: 'assets/book-manager/4.png', text: '도서 등록 폼' },
+        { url: 'assets/book-manager/5.png', text: '사용자 인증 시스템' },
+        { url: 'assets/book-manager/6.png', text: '권한 관리' },
+        { url: 'assets/book-manager/7.png', text: '데이터베이스 구조' },
       ],
       demo: null,
       github: 'https://github.com/mhoo999/book-manager-backend'
@@ -332,9 +336,12 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['개인 프로젝트', '시뮬레이터', '손가락 인식'],
       description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
       images: [
-        'https://via.placeholder.com/200x120/e74c3c/ffffff?text=Lets+Try+1',
-        'https://via.placeholder.com/200x120/c0392b/ffffff?text=Lets+Try+2',
-        'https://via.placeholder.com/200x120/f39c12/ffffff?text=Lets+Try+3'
+        { url: 'assets/lets-try/1.png', text: 'Lets-try 메인 화면' },
+        { url: 'assets/lets-try/2.png', text: '반지 선택 화면' },
+        { url: 'assets/lets-try/3.png', text: '손가락 인식 기능' },
+        { url: 'assets/lets-try/4.png', text: '반지-손가락 합성 결과' },
+        { url: 'assets/lets-try/5.png', text: '반지 이미지 업로드' },
+        { url: 'assets/lets-try/6.png', text: '최종 결과물' },
       ],
       demo: 'https://lets-try-mu.vercel.app/',
       github: 'https://github.com/mhoo999/lets-try'
