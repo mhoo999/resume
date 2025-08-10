@@ -115,6 +115,11 @@ function addPortfolioItems(items) {
       <div class="portfolio-item-content">
         <h3>${item.title}</h3>
         <div class="portfolio-summary" style="font-size:0.98em;color:#aaa;margin-bottom:15px;">${item.summary || ''}</div>
+        ${item.images && item.images.length > 0 ? `
+          <div class="portfolio-images-container">
+            ${item.images.map((img, index) => `<img src="${img}" alt="${item.title} 이미지 ${index + 1}" class="portfolio-image" data-image-src="${img}" data-image-title="${item.title}">`).join('')}
+          </div>
+        ` : ''}
         <div class="portfolio-meta">
           ${tags.map(tag => `<span class="portfolio-tag">${tag}</span>`).join('')}
         </div>
@@ -131,8 +136,78 @@ function addPortfolioItems(items) {
         </div>
       </div>
     `;
+    
+    // 이미지 클릭 이벤트 리스너 추가
+    const images = itemDiv.querySelectorAll('.portfolio-image');
+    images.forEach(img => {
+      img.addEventListener('click', function() {
+        openImagePopup(this.dataset.imageSrc, this.dataset.imageTitle);
+      });
+    });
+    
     portfolioItems.appendChild(itemDiv);
   });
+}
+
+// 이미지 팝업 열기 함수
+function openImagePopup(imageSrc, imageTitle) {
+  // 기존 팝업이 있다면 제거
+  const existingPopup = document.querySelector('.image-popup-overlay');
+  if (existingPopup) {
+    existingPopup.remove();
+  }
+  
+  // 팝업 오버레이 생성
+  const overlay = document.createElement('div');
+  overlay.className = 'image-popup-overlay';
+  
+  // 팝업 내용 생성
+  overlay.innerHTML = `
+    <div class="image-popup-content">
+      <button class="image-popup-close">&times;</button>
+      <img src="${imageSrc}" alt="${imageTitle}">
+      <div class="image-popup-title">${imageTitle}</div>
+    </div>
+  `;
+  
+  // 닫기 버튼 이벤트
+  const closeBtn = overlay.querySelector('.image-popup-close');
+  closeBtn.addEventListener('click', closeImagePopup);
+  
+  // 오버레이 클릭 시 닫기
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+      closeImagePopup();
+    }
+  });
+  
+  // ESC 키로 닫기
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeImagePopup();
+    }
+  });
+  
+  // body에 팝업 추가 및 스크롤 방지
+  document.body.appendChild(overlay);
+  document.body.classList.add('popup-active');
+  
+  // 애니메이션을 위한 지연
+  setTimeout(() => {
+    overlay.classList.add('active');
+  }, 10);
+}
+
+// 이미지 팝업 닫기 함수
+function closeImagePopup() {
+  const overlay = document.querySelector('.image-popup-overlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    setTimeout(() => {
+      overlay.remove();
+      document.body.classList.remove('popup-active');
+    }, 200);
+  }
 }
 
 // Devicon CDN의 SVG 아이콘 사용 및 info-container 동적 데이터 예시
@@ -234,6 +309,20 @@ window.addEventListener('DOMContentLoaded', function() {
       summary: '도서 관리 시스템 - 프론트엔드와 백엔드 분리 아키텍처',
       tags: ['팀 프로젝트', '4명', 'Spring', 'React', '풀스택'],
       description: '- Java Spring Boot (백엔드), React (프론트엔드)<br>- RESTful API 설계 및 구현으로 프론트엔드와 백엔드 분리<br>- 도서 등록, 조회, 수정, 삭제 기능 구현<br>- 사용자 인증 및 권한 관리 시스템<br>- 데이터베이스 설계 및 연동',
+      images: [
+        'assets/book-manager/1.png',
+        'assets/book-manager/2.png',
+        'assets/book-manager/3.png',
+        'assets/book-manager/4.png',
+        'assets/book-manager/5.png',
+        'assets/book-manager/6.png',
+        'assets/book-manager/7.png',
+        'assets/book-manager/8.png',
+        'assets/book-manager/9.png',
+        'assets/book-manager/10.png',
+        'assets/book-manager/11.png',
+        'assets/book-manager/12.png',
+      ],
       demo: null,
       github: 'https://github.com/mhoo999/book-manager-backend'
     },
@@ -242,6 +331,11 @@ window.addEventListener('DOMContentLoaded', function() {
       summary: '반지 시뮬레이션 웹 서비스',
       tags: ['개인 프로젝트', '시뮬레이터', '손가락 인식'],
       description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
+      images: [
+        'https://via.placeholder.com/200x120/e74c3c/ffffff?text=Lets+Try+1',
+        'https://via.placeholder.com/200x120/c0392b/ffffff?text=Lets+Try+2',
+        'https://via.placeholder.com/200x120/f39c12/ffffff?text=Lets+Try+3'
+      ],
       demo: 'https://lets-try-mu.vercel.app/',
       github: 'https://github.com/mhoo999/lets-try'
     },
@@ -250,6 +344,11 @@ window.addEventListener('DOMContentLoaded', function() {
       summary: '한정 수량의 상품을 세일하여 판매하는 상황을 가정한 주문/이벤트 API 프로젝트',
       tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
       description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을<br>사용하여 구현',
+      images: [
+        'https://via.placeholder.com/200x120/27ae60/ffffff?text=딱+대기+1',
+        'https://via.placeholder.com/200x120/229954/ffffff?text=딱+대기+2',
+        'https://via.placeholder.com/200x120/16a085/ffffff?text=딱+대기+3'
+      ],
       demo: 'https://youtu.be/p4AiTCeyYo4',
       github: 'https://github.com/mhoo999/ddak-daegi'
     },
@@ -258,6 +357,11 @@ window.addEventListener('DOMContentLoaded', function() {
       summary: '배달의 민족 애플리케이션과 같이 손님과 사장님 계정을 구분하여 주문/리뷰 기능을 구현한 프로젝트',
       tags: ['팀 프로젝트', '5명', 'Spring', 'JWT', '세션'],
       description: '- Java Spring, JWT<br>- 계정 권한에 따른 기능을 분리<br>- 손님 계정은 주문을 진행하고, 리뷰를 작성<br>- 사장님 계정은 가게와 메뉴를 만들고, 주문을 받고 리뷰에 대댓글을 달 수 있도록 개발<br>- 세션 기반 인증/인가 기능을 구현',
+      images: [
+        'https://via.placeholder.com/200x120/9b59b6/ffffff?text=배달앱+1',
+        'https://via.placeholder.com/200x120/8e44ad/ffffff?text=배달앱+2',
+        'https://via.placeholder.com/200x120/7d3c98/ffffff?text=배달앱+3'
+      ],
       demo: 'https://youtu.be/Qy7XUUgAt7o',
       github: 'https://github.com/mhoo999/delivery-service'
     },
@@ -266,6 +370,11 @@ window.addEventListener('DOMContentLoaded', function() {
       summary: '친구 기반 피드 제공 SNS 서비스',
       tags: ['팀 프로젝트', '4명', 'Spring'],
       description: '- Java Spring<br>- 회원가입, 로그인 기능부터 게시물 작성, 댓글 작성 기능<br>- 친구 추가 기능을 만들어 친구 사용자의 게시물만 피드에서 볼 수 있는 기능을 개발',
+      images: [
+        'https://via.placeholder.com/200x120/34495e/ffffff?text=Newsfeed+1',
+        'https://via.placeholder.com/200x120/2c3e50/ffffff?text=Newsfeed+2',
+        'https://via.placeholder.com/200x120/2ecc71/ffffff?text=Newsfeed+3'
+      ],
       demo: 'https://youtu.be/VIdJOUFs28w?si=0__PYSj-xTIPBUwW',
       github: 'https://github.com/mhoo999/news-feed'
     }
