@@ -319,13 +319,13 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '4명', 'Spring', 'React', '풀스택'],
       description: '- Java Spring Boot (백엔드), React (프론트엔드)<br>- RESTful API 설계 및 구현으로 프론트엔드와 백엔드 분리<br>- 도서 등록, 조회, 수정, 삭제 기능 구현<br>- 사용자 인증 및 권한 관리 시스템<br>- 데이터베이스 설계 및 연동',
       images: [
-        { url: 'assets/book-manager/1.png', text: 'Book Manager 메인 화면' },
-        { url: 'assets/book-manager/2.png', text: '도서 목록 조회' },
-        { url: 'assets/book-manager/3.png', text: '도서 상세 정보' },
-        { url: 'assets/book-manager/4.png', text: '도서 등록 폼' },
-        { url: 'assets/book-manager/5.png', text: '사용자 인증 시스템' },
-        { url: 'assets/book-manager/6.png', text: '권한 관리' },
-        { url: 'assets/book-manager/7.png', text: '데이터베이스 구조' },
+        { url: 'assets/book-manager/1.png', text: '아키텍처' },
+        { url: 'assets/book-manager/2.png', text: '유저 메인페이지' },
+        { url: 'assets/book-manager/3.png', text: '도서 목록' },
+        { url: 'assets/book-manager/4.png', text: '검색 결과' },
+        { url: 'assets/book-manager/5.png', text: '관리자 대시보드' },
+        { url: 'assets/book-manager/6.png', text: '대여 목록' },
+        { url: 'assets/book-manager/7.png', text: '대여정보 변경' },
       ],
       demo: null,
       github: 'https://github.com/mhoo999/book-manager-backend'
@@ -336,12 +336,12 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['개인 프로젝트', '시뮬레이터', '손가락 인식'],
       description: '- React, Next.js, TypeScript, html2canvas, Supabase, vercel<br>- Google API를 활용한 손가락 인식 기능 구현<br>- html2canvas를 사용한 반지-손가락 이미지 합성<br>- Supabase DB 를 사용하여 반지 이미지 업로드<br>- Versel 배포(서버리스)',
       images: [
-        { url: 'assets/lets-try/1.png', text: 'Lets-try 메인 화면' },
-        { url: 'assets/lets-try/2.png', text: '반지 선택 화면' },
-        { url: 'assets/lets-try/3.png', text: '손가락 인식 기능' },
-        { url: 'assets/lets-try/4.png', text: '반지-손가락 합성 결과' },
-        { url: 'assets/lets-try/5.png', text: '반지 이미지 업로드' },
-        { url: 'assets/lets-try/6.png', text: '최종 결과물' },
+        { url: 'assets/lets-try/1.png', text: '아키텍처' },
+        { url: 'assets/lets-try/2.png', text: '랜딩페이지' },
+        { url: 'assets/lets-try/3.png', text: '손 촬영' },
+        { url: 'assets/lets-try/4.png', text: '반지 선택' },
+        { url: 'assets/lets-try/5.png', text: '반지 위치 선택' },
+        { url: 'assets/lets-try/6.png', text: '이미지 공유' },
       ],
       demo: 'https://lets-try-mu.vercel.app/',
       github: 'https://github.com/mhoo999/lets-try'
@@ -350,11 +350,11 @@ window.addEventListener('DOMContentLoaded', function() {
       title: '딱 대기',
       summary: '한정 수량의 상품을 세일하여 판매하는 상황을 가정한 주문/이벤트 API 프로젝트',
       tags: ['팀 프로젝트', '4명', 'Redis', '분산락', '동시성 제어'],
-      description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을<br>사용하여 구현',
+      description: '- Java Spring, Redis<br>- 짧은 시간에 다수의 주문이 생성될 경우 발생할 수 있는 동시성 문제 고려<br>- Redis 의 DelayQueue 기능을 하는 Zset 을 사용하여 프로모션의 시작 날짜와 종료 날짜를 체크하여 해당 날짜가 되었을 때 프로모션을 활성화 또는 비활성화<br>- 다중 서버에서 동일한 작업 수행을 방지하기 위해 분산락 기능을 사용하여 구현',
       images: [
-        'https://via.placeholder.com/200x120/27ae60/ffffff?text=딱+대기+1',
-        'https://via.placeholder.com/200x120/229954/ffffff?text=딱+대기+2',
-        'https://via.placeholder.com/200x120/16a085/ffffff?text=딱+대기+3'
+        { url: 'assets/ddak-daegi/1.png', text: '아키텍처' },
+        { url: 'assets/ddak-daegi/2.png', text: '일정 시간 동안 이벤트 활성화' },
+        { url: 'assets/ddak-daegi/3.jpg', text: '재고 수량 내에서 한정판매 진행' },
       ],
       demo: 'https://youtu.be/p4AiTCeyYo4',
       github: 'https://github.com/mhoo999/ddak-daegi'
@@ -365,9 +365,10 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '5명', 'Spring', 'JWT', '세션'],
       description: '- Java Spring, JWT<br>- 계정 권한에 따른 기능을 분리<br>- 손님 계정은 주문을 진행하고, 리뷰를 작성<br>- 사장님 계정은 가게와 메뉴를 만들고, 주문을 받고 리뷰에 대댓글을 달 수 있도록 개발<br>- 세션 기반 인증/인가 기능을 구현',
       images: [
-        'https://via.placeholder.com/200x120/9b59b6/ffffff?text=배달앱+1',
-        'https://via.placeholder.com/200x120/8e44ad/ffffff?text=배달앱+2',
-        'https://via.placeholder.com/200x120/7d3c98/ffffff?text=배달앱+3'
+        { url: 'assets/delivery-service/1.png', text: '아키텍처' },
+        { url: 'assets/delivery-service/2.png', text: '가게 목록 나열과 가게 메뉴 나열' },
+        { url: 'assets/delivery-service/3.png', text: '선택한 메뉴를 장바구니에 추가' },
+        { url: 'assets/delivery-service/4.png', text: '사장님 댓글 기능(대댓글)' },
       ],
       demo: 'https://youtu.be/Qy7XUUgAt7o',
       github: 'https://github.com/mhoo999/delivery-service'
@@ -378,9 +379,8 @@ window.addEventListener('DOMContentLoaded', function() {
       tags: ['팀 프로젝트', '4명', 'Spring'],
       description: '- Java Spring<br>- 회원가입, 로그인 기능부터 게시물 작성, 댓글 작성 기능<br>- 친구 추가 기능을 만들어 친구 사용자의 게시물만 피드에서 볼 수 있는 기능을 개발',
       images: [
-        'https://via.placeholder.com/200x120/34495e/ffffff?text=Newsfeed+1',
-        'https://via.placeholder.com/200x120/2c3e50/ffffff?text=Newsfeed+2',
-        'https://via.placeholder.com/200x120/2ecc71/ffffff?text=Newsfeed+3'
+        { url: 'assets/news-feed/1.png', text: '아키텍처' },
+        { url: 'assets/news-feed/2.png', text: '목업 이미지' },
       ],
       demo: 'https://youtu.be/VIdJOUFs28w?si=0__PYSj-xTIPBUwW',
       github: 'https://github.com/mhoo999/news-feed'
