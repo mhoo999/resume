@@ -250,7 +250,7 @@ window.addEventListener('DOMContentLoaded', function() {
         icon: `<img src="assets/link-github.svg" alt="github" style="width: 36px; height: 36px; filter: invert(1);">`
     },
     {
-      href: 'https://techoonology.notion.site/Study-8212a4fbbba5427bb463607cb46bfc59?pvs=4',
+      href: 'https://confusion-squash-779.notion.site/Study-268df13fc92e819f95ebdcdf65627963?source=copy_link',
       icon: `<img src="assets/link-notion.svg" alt="notion" style="width: 36px; height: 36px;">`
     }
   ]);
