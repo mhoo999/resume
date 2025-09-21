@@ -232,7 +232,6 @@ window.addEventListener('DOMContentLoaded', function() {
   addStackIcon('assets/stack-java.svg', 'java');
   addStackIcon('assets/stack-spring.svg', 'spring');
   addStackIcon('assets/stack-mysql.svg', 'mysql');
-  addStackIcon('assets/stack-oracle.svg', 'oracle');
   addStackIcon('assets/stack-cpp.svg', 'cpp');
   addStackIcon('assets/stack-csharp.svg', 'csharp');
   addStackIcon('assets/stack-python.svg', 'python');
